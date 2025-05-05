@@ -1,0 +1,48 @@
+<div class="admin-container">
+  <div class="admin-header">
+    <div class="admin-icon">👤</div>
+    <div class="admin-title">
+      <h1>Admin Dashboard</h1>
+      <p class="admin-description">Lazy loaded module demonstration</p>
+    </div>
+  </div>
+
+  <div class="admin-navigation">
+    <h3><span class="nav-icon">⚙️</span> Admin Navigation</h3>
+    <div class="nav-options">
+      <a
+        routerLink="/admin"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="active"
+        class="nav-option"
+      >
+        <span class="option-icon">🏠</span>
+        <span class="option-label">Dashboard</span>
+      </a>
+      <a routerLink="/admin/user" routerLinkActive="active" class="nav-option">
+        <span class="option-icon">👥</span>
+        <span class="option-label">User Management</span>
+      </a>
+      <a routerLink="/admin/asset" routerLinkActive="active" class="nav-option">
+        <span class="option-icon">💼</span>
+        <span class="option-label">Asset Management</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="admin-content">
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="info-card">
+    <h4><span class="info-icon">ℹ️</span> Lazy Loading Information</h4>
+    <p>
+      This admin module demonstrates lazy loading in Angular. The module is only
+      loaded when navigating to the admin routes.
+    </p>
+    <p>
+      <span class="info-icon">🔍</span> Module loaded from:
+      <code>admin.module.ts</code>
+    </p>
+  </div>
+</div>

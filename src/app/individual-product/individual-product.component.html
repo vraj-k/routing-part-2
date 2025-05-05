@@ -1,0 +1,78 @@
+<div class="product-container">
+  <div class="product-card">
+    <div class="product-icon" [ngClass]="selectedCategory()">
+      <!-- Icons for different categories -->
+      <span *ngIf="selectedCategory() === 'fruit'" class="emoji">🍎</span>
+      <span *ngIf="selectedCategory() === 'car'" class="emoji">🚗</span>
+      <span *ngIf="selectedCategory() === 'mobile'" class="emoji">📱</span>
+    </div>
+
+    <div class="product-details">
+      <div class="category-badge">{{ selectedCategory() | titlecase }}</div>
+      <h2 class="product-name">{{ selectedItem() | titlecase }}</h2>
+      <p class="selection-message">
+        You selected <strong>{{ selectedItem() | titlecase }}</strong> from
+        <strong>{{ selectedCategory() | titlecase }}</strong> category
+      </p>
+
+      <!-- Product specific icons -->
+      <div class="product-specific-icon">
+        <span
+          *ngIf="selectedCategory() === 'fruit' && selectedItem() === 'apple'"
+          class="emoji"
+          >🍎</span
+        >
+        <span
+          *ngIf="selectedCategory() === 'fruit' && selectedItem() === 'banana'"
+          class="emoji"
+          >🍌</span
+        >
+        <span
+          *ngIf="selectedCategory() === 'car' && selectedItem() === 'swift'"
+          class="emoji"
+          >🚙</span
+        >
+        <span
+          *ngIf="selectedCategory() === 'car' && selectedItem() === 'alto'"
+          class="emoji"
+          >🚘</span
+        >
+        <span
+          *ngIf="
+            selectedCategory() === 'mobile' && selectedItem() === 'charger'
+          "
+          class="emoji"
+          >🔌</span
+        >
+        <span
+          *ngIf="
+            selectedCategory() === 'mobile' && selectedItem() === 'ear-buds'
+          "
+          class="emoji"
+          >🎧</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="actions-card">
+    <button class="action-button" (click)="changeAddress()">
+      <span class="button-icon">🔄</span>
+      Change URL
+    </button>
+  </div>
+
+  <div class="info-card">
+    <h4>Information</h4>
+    <p>
+      <span class="info-icon">ℹ️</span> On click of the button, the URL in the
+      address bar gets changed
+      <br />
+      <span></span>
+    </p>
+    <p>
+      <span class="info-icon">🔍</span> Current URL parameters:
+      <code>/product/{{ selectedCategory() }}/{{ selectedItem() }}</code>
+    </p>
+  </div>
+</div>

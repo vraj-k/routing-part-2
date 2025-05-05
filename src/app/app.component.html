@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="header-content">
+    <div class="logo">Routing Demo</div>
+    <nav *ngIf="!isAtRoot">
+      <a routerLink="/dashboard" class="back-link">« Back to Dashboard</a>
+    </nav>
+  </div>
+</header>
+
+<div class="main-container">
+  <router-outlet></router-outlet>
+</div>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p>Angular Routing Demo - Learn Routing Concepts</p>
+  </div>
+</footer>

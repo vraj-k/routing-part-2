@@ -1,0 +1,51 @@
+<div class="vehicle-parent-container">
+  <div class="parent-header">
+    <div class="parent-icon">🚦</div>
+    <div class="parent-title">
+      <h1>Vehicle Hub</h1>
+      <p class="parent-description">
+        This is the parent component for all vehicles
+      </p>
+    </div>
+  </div>
+
+  <div class="selector-panel">
+    <h3><span class="selector-icon">🔽</span> Select a Vehicle Type</h3>
+    <div class="vehicle-options">
+      <a routerLink="/vehicle/bike" class="vehicle-option bike">
+        <span class="option-icon">🚲</span>
+        <span class="option-label">Bike</span>
+      </a>
+      <a routerLink="/vehicle/scooty" class="vehicle-option scooty">
+        <span class="option-icon">🛵</span>
+        <span class="option-label">Scooty</span>
+      </a>
+      <a routerLink="/vehicle/activa" class="vehicle-option activa">
+        <span class="option-icon">🛵</span>
+        <span class="option-label">Activa</span>
+      </a>
+      <a routerLink="/vehicle/car" class="vehicle-option car">
+        <span class="option-icon">🚗</span>
+        <span class="option-label">Car</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="child-content-container">
+    <div class="child-wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+  <div class="info-card">
+    <h4><span class="info-icon">ℹ️</span> Parent-Child Routing</h4>
+    <p>
+      This demonstrates how a parent component can contain child routes. The
+      selected vehicle details appear above.
+    </p>
+    <p>
+      <span class="info-icon">🔍</span> Route structure:
+      <code>/vehicle/[vehicleId]</code>
+    </p>
+  </div>
+</div>

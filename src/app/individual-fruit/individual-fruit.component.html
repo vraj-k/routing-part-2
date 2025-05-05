@@ -1,0 +1,38 @@
+<div class="fruit-container">
+  <div class="fruit-card">
+    <div class="fruit-icon">
+      <!-- Fruit emojis based on selection -->
+      <span *ngIf="selectedFruit === 'apple'" class="emoji">🍎</span>
+      <span *ngIf="selectedFruit === 'banana'" class="emoji">🍌</span>
+      <span *ngIf="selectedFruit === 'grape'" class="emoji">🍇</span>
+      <span *ngIf="selectedFruit === 'watermelon'" class="emoji">🍉</span>
+      <span *ngIf="selectedFruit === 'guava'" class="emoji">🥝</span>
+      <span *ngIf="!selectedFruit" class="emoji">🍎🍌🍇</span>
+    </div>
+
+    <div class="fruit-details">
+      <div class="badge">Fresh Fruit</div>
+      <h2 class="fruit-name" *ngIf="selectedFruit">
+        {{ description | titlecase }}
+      </h2>
+      <h2 class="fruit-name" *ngIf="!selectedFruit">Select a Fruit</h2>
+      <p class="fruit-description">
+        <span *ngIf="selectedFruit"
+          >You selected a delicious {{ selectedFruit | titlecase }}!</span
+        >
+        <span *ngIf="!selectedFruit"
+          >Please select a fruit from the dashboard.</span
+        >
+      </p>
+    </div>
+  </div>
+
+  <div class="info-card">
+    <h4><span class="info-icon">ℹ️</span> Information</h4>
+    <p>This demonstrates passing a single parameter via the route path.</p>
+    <p>
+      <span class="info-icon">🔍</span> Current URL:
+      <code>/fruit/{{ selectedFruit ? selectedFruit : "" }}</code>
+    </p>
+  </div>
+</div>

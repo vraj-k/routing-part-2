@@ -1,0 +1,278 @@
+.vehicle-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.vehicle-card {
+  display: flex;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.vehicle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  padding: 20px;
+  background-color: #3498db;
+}
+
+.emoji {
+  font-size: 55px;
+  line-height: 1;
+}
+
+.vehicle-details {
+  flex: 1;
+  padding: 25px;
+  position: relative;
+}
+
+.child-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #e1f5fe;
+  color: #0277bd;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.vehicle-name {
+  font-size: 32px;
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+}
+
+.vehicle-description {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 15px;
+
+  strong {
+    color: #2c3e50;
+    font-weight: 500;
+  }
+}
+
+.info-card {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px 25px;
+  color: #555;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  h4 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+  }
+
+  p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.info-icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+code {
+  background-color: #e9ecef;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  color: #e74c3c;
+}
+
+.child-vehicle-container {
+  width: 100%;
+  padding: 5px;
+}
+
+.vehicle-detail-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.vehicle-detail-header {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #34495e;
+  color: white !important;
+
+  h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 500;
+  }
+}
+
+.vehicle-detail-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+  color: white;
+}
+
+.vehicle-detail-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.emoji {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.vehicle-detail-content {
+  padding: 20px;
+}
+
+.detail-pill {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f5f7fa;
+  border-radius: 20px;
+  padding: 4px 8px 4px 4px;
+  margin-bottom: 15px;
+
+  &.bike {
+    background-color: #e8f5e9;
+  }
+
+  &.scooty,
+  &.activa {
+    background-color: #e3f2fd;
+  }
+
+  &.car {
+    background-color: #fff3e0;
+  }
+}
+
+.detail-pill-label {
+  background-color: #34495e;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.detail-pill-value {
+  font-weight: 500;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+.detail-row {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: flex-start;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.detail-label {
+  width: 100px;
+  font-weight: 500;
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+.detail-value {
+  flex: 1;
+}
+
+.status-badge {
+  display: inline-block;
+  background-color: #2ecc71;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.feature-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.feature-pill {
+  background-color: #f0f7ff;
+  color: #3498db;
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  border: 1px solid #d0e3ff;
+}
+
+.route-info {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #ecf0f1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.route-badge {
+  background-color: #34495e;
+  color: white;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.route-path {
+  color: #7f8c8d;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+code {
+  background-color: #f5f7fa;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  color: #e74c3c;
+  margin-left: 5px;
+}

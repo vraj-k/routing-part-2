@@ -1,0 +1,26 @@
+<div class="child-vehicle-container">
+  <div class="vehicle-detail-card">
+    <div class="vehicle-detail-header">
+      <div class="vehicle-detail-icon">
+        <!-- Vehicle emojis based on selection -->
+        <span *ngIf="selectedVehicle === 'bike'" class="emoji">🚲</span>
+        <span *ngIf="selectedVehicle === 'scooty'" class="emoji">🛵</span>
+        <span *ngIf="selectedVehicle === 'activa'" class="emoji">🛵</span>
+        <span *ngIf="selectedVehicle === 'car'" class="emoji">🚗</span>
+        <span *ngIf="!selectedVehicle" class="emoji">🚗</span>
+      </div>
+      <h2 class="vehicle-detail-title">{{ selectedVehicle | titlecase }}</h2>
+    </div>
+
+    <div class="vehicle-detail-content">
+      <div class="detail-pill" [ngClass]="selectedVehicle">
+        <span class="detail-pill-label">Type</span>
+        <span class="detail-pill-value">{{ selectedVehicle | titlecase }}</span>
+      </div>
+
+      <div class="route-info">
+        <code>Child Route</code>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,89 @@
+<div class="reactive-container">
+  <div class="reactive-card">
+    <div class="reactive-icon" [ngClass]="selectedCategory()">
+      <!-- Icons for different categories -->
+      <span *ngIf="selectedCategory() === 'fruit'" class="emoji">🍎</span>
+      <span *ngIf="selectedCategory() === 'car'" class="emoji">🚗</span>
+      <span *ngIf="selectedCategory() === 'mobile'" class="emoji">📱</span>
+    </div>
+
+    <div class="reactive-details">
+      <div class="reactive-badge">Reactive</div>
+      <h2 class="product-name">{{ selectedItem() | titlecase }}</h2>
+      <p class="selection-message">{{ displayMessage() }}</p>
+
+      <!-- Product specific icons -->
+      <div class="product-specific-icon">
+        <span
+          *ngIf="selectedCategory() === 'fruit' && selectedItem() === 'apple'"
+          class="emoji"
+          >🍎</span
+        >
+        <span
+          *ngIf="selectedCategory() === 'fruit' && selectedItem() === 'banana'"
+          class="emoji"
+          >🍌</span
+        >
+        <span
+          *ngIf="selectedCategory() === 'car' && selectedItem() === 'swift'"
+          class="emoji"
+          >🚙</span
+        >
+        <span
+          *ngIf="selectedCategory() === 'car' && selectedItem() === 'alto'"
+          class="emoji"
+          >🚘</span
+        >
+        <span
+          *ngIf="
+            selectedCategory() === 'mobile' && selectedItem() === 'charger'
+          "
+          class="emoji"
+          >🔌</span
+        >
+        <span
+          *ngIf="
+            selectedCategory() === 'mobile' && selectedItem() === 'ear-buds'
+          "
+          class="emoji"
+          >🎧</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="actions-card">
+    <button class="action-button" (click)="changeAddress()">
+      <span class="button-icon">🔄</span>
+      Change URL
+    </button>
+  </div>
+
+  <div class="info-card">
+    <h4><span class="info-icon">ℹ️</span> Reactive Routing Information</h4>
+    <ul class="info-list">
+      <li>
+        <span class="info-bullet">•</span> On click of the button, the URL in
+        address bar gets changed
+      </li>
+      <li>
+        <span class="info-bullet">•</span> As we have specified same path with
+        different value, hence same component gets called again
+      </li>
+      <li>
+        <span class="info-bullet">•</span> We have already subscribed to the
+        parameter change as Observable, hence it gets value once URL gets
+        changed
+      </li>
+      <li>
+        <span class="info-bullet">•</span> The benefit is, here the whole
+        component is not reloaded (i.e., life cycle and constructor not called
+        again - check console)
+      </li>
+    </ul>
+    <p class="url-info">
+      <span class="info-icon">🔍</span> Current URL:
+      <code>/reactive/{{ selectedCategory() }}/{{ selectedItem() }}</code>
+    </p>
+  </div>
+</div>

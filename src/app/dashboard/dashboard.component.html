@@ -1,0 +1,223 @@
+<div class="container">
+  <div class="page-header">
+    <h1>Angular Routing - Dashboard</h1>
+    <p>Explore different routing concepts with these examples</p>
+  </div>
+
+  <div class="routing-grid">
+    <!-- Card 1 -->
+    <div class="route-card">
+      <div class="card-header">
+        <h3>Single Data as Path</h3>
+        <span class="badge">Static</span>
+      </div>
+      <div class="card-body">
+        <h4>Select Fruit</h4>
+        <ul class="feature-list">
+          <li><a routerLink="/fruit">None</a></li>
+          <li><a routerLink="/fruit/apple">Apple</a></li>
+          <li><a routerLink="/fruit/banana">Banana</a></li>
+          <li><a routerLink="/fruit/grape">Grape</a></li>
+          <li><a routerLink="/fruit/watermelon">Watermelon</a></li>
+          <li><a routerLink="/fruit/guava">Guava</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="route-card">
+      <div class="card-header">
+        <h3>Multiple Data as Path</h3>
+        <span class="badge">Static</span>
+      </div>
+      <div class="card-body">
+        <h4>Select Product</h4>
+        <ul class="feature-list">
+          <li>
+            <span class="category">Fruit</span>
+            <ul>
+              <li>
+                <a routerLink="/product/fruit/apple">Apple</a>
+              </li>
+              <li>
+                <a routerLink="/product/fruit/banana">Banana</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="category">Car</span>
+            <ul>
+              <li><a routerLink="/product/car/swift">Swift</a></li>
+              <li><a routerLink="/product/car/alto">Alto</a></li>
+            </ul>
+          </li>
+          <li>
+            <span class="category">Mobile</span>
+            <ul>
+              <li>
+                <a routerLink="/product/mobile/charger">Charger</a>
+              </li>
+              <li>
+                <a routerLink="/product/mobile/ear-buds">Ear-buds</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="route-card">
+      <div class="card-header">
+        <h3>Multiple Data as Path</h3>
+        <span class="badge">Reactive</span>
+      </div>
+      <div class="card-body">
+        <h4>Select Product</h4>
+        <ul class="feature-list">
+          <li>
+            <span class="category">Fruit</span>
+            <ul>
+              <li>
+                <a routerLink="/reactive/fruit/apple">Apple</a>
+              </li>
+              <li>
+                <a routerLink="/reactive/fruit/banana">Banana</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="category">Car</span>
+            <ul>
+              <li><a routerLink="/reactive/car/swift">Swift</a></li>
+              <li><a routerLink="/reactive/car/alto">Alto</a></li>
+            </ul>
+          </li>
+          <li>
+            <span class="category">Mobile</span>
+            <ul>
+              <li>
+                <a routerLink="/reactive/mobile/charger">Charger</a>
+              </li>
+              <li>
+                <a routerLink="/reactive/mobile/ear-buds">Ear-buds</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="route-card">
+      <div class="card-header">
+        <h3>QueryString & Fragment</h3>
+        <span class="badge">Advanced</span>
+      </div>
+      <div class="card-body">
+        <h4>Select Fruit</h4>
+        <ul class="feature-list">
+          <li>
+            <a routerLink="/fruit-qs" [queryParams]="{ name: 'mango' }"
+              >Mango</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/fruit-qs"
+              [queryParams]="{ name: 'apple' }"
+              fragment="apple-section"
+              >Apple</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/fruit-qs"
+              [queryParams]="{ name: 'banana' }"
+              fragment="banana-section"
+              >Banana</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/fruit-qs"
+              [queryParams]="{ name: 'grape' }"
+              fragment="grape-section"
+              >Grape</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/fruit-qs"
+              [queryParams]="{ name: 'watermelon' }"
+              fragment="watermelon-section"
+              >Watermelon</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/fruit-qs"
+              [queryParams]="{ name: 'guava', isTasty: true }"
+              fragment="gauva-section"
+              >Guava</a
+            >
+          </li>
+          <li>
+            <span role="button" (click)="navigate()">Pineapple (Code)</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="route-card">
+      <div class="card-header">
+        <h3>Child Routes</h3>
+        <span class="badge">Nested</span>
+      </div>
+      <div class="card-body">
+        <h4>Select Vehicle</h4>
+        <ul class="feature-list">
+          <li><a routerLink="/vehicle/bike">Bike</a></li>
+          <li><a routerLink="/vehicle/scooty">Scooty</a></li>
+          <li><a routerLink="/vehicle/activa">Activa</a></li>
+          <li><a routerLink="/vehicle/car">Car</a></li>
+          <li><a routerLink="/vehicle/404">Apple (404)</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="route-card">
+      <div class="card-header">
+        <h3>Lazy Loading</h3>
+        <span class="badge">Performance</span>
+      </div>
+      <div class="card-body">
+        <h4>Select Profile</h4>
+        <ul class="feature-list">
+          <li><a routerLink="/admin">Admin</a></li>
+          <!-- <li><a routerLink="/admin/asset">Asset Management</a></li>
+          <li><a routerLink="/admin/user">User-management</a></li> -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="route-card">
+      <div class="card-header">
+        <h3>404 - No Route Found</h3>
+        <span class="badge">Error Handling</span>
+      </div>
+      <div class="card-body">
+        <h4>Select Functionality</h4>
+        <ul class="feature-list">
+          <li><a routerLink="/login">LogIn</a></li>
+          <li><a routerLink="/logout">LogOut</a></li>
+          <li><a routerLink="/registration">Registration</a></li>
+          <li><a routerLink="/forgot-password">Forgot-password</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
