@@ -9,10 +9,13 @@ import { HeaderComponent } from './header/header.component';
 import { IndividualProductComponent } from './individual-product/individual-product.component';
 import { ReactiveProductComponent } from './reactive-product/reactive-product.component';
 import { IndividualFruitQueryStringComponent } from './individual-fruit-query-string/individual-fruit-query-string.component';
-import { IndividualVehicleComponent } from './individual-vehicle/individual-vehicle.component';
-import { InvalidVehicleComponent } from './invalid-vehicle/invalid-vehicle.component';
 import { AllVehiclesComponent } from './all-vehicles/all-vehicles.component';
 import { InvalidUrlComponent } from './invalid-url/invalid-url.component';
+import { VehicleOverviewComponent } from './vehicle-overview/vehicle-overview.component';
+import { VehicleBikesComponent } from './vehicle-bikes/vehicle-bikes.component';
+import { VehicleScootersComponent } from './vehicle-scooters/vehicle-scooters.component';
+import { VehicleCarsComponent } from './vehicle-cars/vehicle-cars.component';
+import { VehicleMaintenanceComponent } from './vehicle-maintenance/vehicle-maintenance.component';
 
 @NgModule({
   declarations: [
@@ -23,10 +26,13 @@ import { InvalidUrlComponent } from './invalid-url/invalid-url.component';
     IndividualProductComponent,
     ReactiveProductComponent,
     IndividualFruitQueryStringComponent,
-    IndividualVehicleComponent,
-    InvalidVehicleComponent,
     InvalidUrlComponent,
     AllVehiclesComponent,
+    VehicleOverviewComponent,
+    VehicleBikesComponent,
+    VehicleScootersComponent,
+    VehicleCarsComponent,
+    VehicleMaintenanceComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

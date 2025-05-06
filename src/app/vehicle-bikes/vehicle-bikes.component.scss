@@ -1,0 +1,148 @@
+// Common styling - shared with other tabs
+.tab-component-container {
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+.tab-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e1e4e8;
+
+  .tab-icon {
+    font-size: 2rem;
+    margin-right: 15px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin: 0;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+}
+
+.tab-description {
+  margin-top: 30px;
+  color: #6c757d;
+  font-size: 0.95rem;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+
+  code {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #e74c3c;
+  }
+}
+
+// Bikes-specific styling
+.bikes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.bike-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.bike-image {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+
+  &.mountain {
+    background: linear-gradient(135deg, #43a047, #1b5e20);
+  }
+
+  &.road {
+    background: linear-gradient(135deg, #1e88e5, #0d47a1);
+  }
+
+  &.city {
+    background: linear-gradient(135deg, #fb8c00, #e65100);
+  }
+
+  .bike-emoji {
+    font-size: 4rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.bike-info {
+  padding: 20px;
+
+  h3 {
+    margin: 0 0 10px;
+    color: #2c3e50;
+    font-size: 1.3rem;
+  }
+
+  .bike-description {
+    color: #6c757d;
+    margin: 0 0 15px;
+    font-size: 0.95rem;
+  }
+}
+
+.bike-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 10px;
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: #6c757d;
+      margin-bottom: 5px;
+    }
+
+    .stat-value {
+      font-weight: 600;
+      color: #2c3e50;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+
+      &.available {
+        background-color: #e3f2fd;
+        color: #1976d2;
+      }
+
+      &.unavailable {
+        background-color: #ffebee;
+        color: #d32f2f;
+      }
+    }
+  }
+}

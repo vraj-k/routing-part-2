@@ -4,48 +4,65 @@
     <div class="parent-title">
       <h1>Vehicle Hub</h1>
       <p class="parent-description">
-        This is the parent component for all vehicles
+        Vehicle management with tabbed navigation
       </p>
     </div>
   </div>
 
-  <div class="selector-panel">
-    <h3><span class="selector-icon">🔽</span> Select a Vehicle Type</h3>
-    <div class="vehicle-options">
-      <a routerLink="/vehicle/bike" class="vehicle-option bike">
-        <span class="option-icon">🚲</span>
-        <span class="option-label">Bike</span>
+  <div class="tabs-container">
+    <nav class="vehicle-tabs">
+      <a
+        routerLink="/vehicle/overview"
+        routerLinkActive="active-tab"
+        class="tab"
+      >
+        <span class="tab-icon">📋</span>
+        <span class="tab-label">Overview</span>
       </a>
-      <a routerLink="/vehicle/scooty" class="vehicle-option scooty">
-        <span class="option-icon">🛵</span>
-        <span class="option-label">Scooty</span>
+      <a routerLink="/vehicle/bikes" routerLinkActive="active-tab" class="tab">
+        <span class="tab-icon">🚲</span>
+        <span class="tab-label">Bikes</span>
       </a>
-      <a routerLink="/vehicle/activa" class="vehicle-option activa">
-        <span class="option-icon">🛵</span>
-        <span class="option-label">Activa</span>
+      <a
+        routerLink="/vehicle/scooters"
+        routerLinkActive="active-tab"
+        class="tab"
+      >
+        <span class="tab-icon">🛵</span>
+        <span class="tab-label">Scooters</span>
       </a>
-      <a routerLink="/vehicle/car" class="vehicle-option car">
-        <span class="option-icon">🚗</span>
-        <span class="option-label">Car</span>
+      <a routerLink="/vehicle/cars" routerLinkActive="active-tab" class="tab">
+        <span class="tab-icon">🚗</span>
+        <span class="tab-label">Cars</span>
       </a>
-    </div>
+      <a
+        routerLink="/vehicle/maintenance"
+        routerLinkActive="active-tab"
+        class="tab"
+      >
+        <span class="tab-icon">🔧</span>
+        <span class="tab-label">Maintenance</span>
+      </a>
+    </nav>
   </div>
 
-  <div class="child-content-container">
-    <div class="child-wrapper">
-      <router-outlet></router-outlet>
-    </div>
+  <div class="tab-content">
+    <router-outlet></router-outlet>
   </div>
 
   <div class="info-card">
-    <h4><span class="info-icon">ℹ️</span> Parent-Child Routing</h4>
+    <h4><span class="info-icon">ℹ️</span> About Child Routes</h4>
     <p>
-      This demonstrates how a parent component can contain child routes. The
-      selected vehicle details appear above.
+      This demonstrates a tab navigation system using child routes. Each tab
+      loads a different component.
     </p>
     <p>
-      <span class="info-icon">🔍</span> Route structure:
-      <code>/vehicle/[vehicleId]</code>
+      <span class="info-icon">⚙️</span> Current route:
+      <code>/vehicle/[tab-name]</code>
+    </p>
+    <p>
+      <span class="info-icon">💡</span> Tip: Child routes help organize complex
+      UIs into logical sections
     </p>
   </div>
 </div>

@@ -1,0 +1,112 @@
+<div class="tab-component-container">
+  <div class="tab-header">
+    <div class="tab-icon">🔧</div>
+    <h2>Vehicle Maintenance</h2>
+  </div>
+
+  <div class="maintenance-content">
+    <div class="status-panel">
+      <h3>Service Status</h3>
+      <div class="status-cards">
+        <div class="status-card">
+          <div class="status-icon pending">⏱️</div>
+          <div class="status-details">
+            <h4>Pending</h4>
+            <div class="status-count">2</div>
+          </div>
+        </div>
+        <div class="status-card">
+          <div class="status-icon in-progress">🔄</div>
+          <div class="status-details">
+            <h4>In Progress</h4>
+            <div class="status-count">3</div>
+          </div>
+        </div>
+        <div class="status-card">
+          <div class="status-icon completed">✅</div>
+          <div class="status-details">
+            <h4>Completed</h4>
+            <div class="status-count">8</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="maintenance-schedule">
+      <h3>Scheduled Maintenance</h3>
+      <div class="schedule-table">
+        <div class="table-header">
+          <div class="header-cell">Vehicle</div>
+          <div class="header-cell">Service Type</div>
+          <div class="header-cell">Date</div>
+          <div class="header-cell">Status</div>
+        </div>
+
+        <div class="table-row">
+          <div class="cell vehicle">
+            <span class="vehicle-icon">🚗</span>
+            <span>Sedan</span>
+          </div>
+          <div class="cell">Oil Change</div>
+          <div class="cell">Nov 15, 2023</div>
+          <div class="cell">
+            <span class="status-indicator completed">Completed</span>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="cell vehicle">
+            <span class="vehicle-icon">🚲</span>
+            <span>Mountain Bike</span>
+          </div>
+          <div class="cell">Brake Service</div>
+          <div class="cell">Nov 18, 2023</div>
+          <div class="cell">
+            <span class="status-indicator in-progress">In Progress</span>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="cell vehicle">
+            <span class="vehicle-icon">🛵</span>
+            <span>Electric Scooter</span>
+          </div>
+          <div class="cell">Battery Check</div>
+          <div class="cell">Nov 20, 2023</div>
+          <div class="cell">
+            <span class="status-indicator pending">Pending</span>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="cell vehicle">
+            <span class="vehicle-icon">🚙</span>
+            <span>SUV</span>
+          </div>
+          <div class="cell">Tire Rotation</div>
+          <div class="cell">Nov 22, 2023</div>
+          <div class="cell">
+            <span class="status-indicator pending">Pending</span>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="cell vehicle">
+            <span class="vehicle-icon">🚲</span>
+            <span>City Bike</span>
+          </div>
+          <div class="cell">Chain Service</div>
+          <div class="cell">Nov 16, 2023</div>
+          <div class="cell">
+            <span class="status-indicator in-progress">In Progress</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="tab-description">
+    This tab demonstrates the maintenance component loaded within the parent
+    vehicle container. Child route: <code>/vehicle/maintenance</code>
+  </p>
+</div>

@@ -1,0 +1,77 @@
+<div class="tab-component-container">
+  <div class="tab-header">
+    <div class="tab-icon">📋</div>
+    <h2>Vehicle Fleet Overview</h2>
+  </div>
+
+  <div class="overview-stats">
+    <div class="stat-card" routerLink="/vehicle/bikes">
+      <div class="stat-icon">🚲</div>
+      <div class="stat-info">
+        <span class="stat-value">12</span>
+        <span class="stat-label">Bikes</span>
+      </div>
+    </div>
+    <div class="stat-card" routerLink="/vehicle/scooters">
+      <div class="stat-icon">🛵</div>
+      <div class="stat-info">
+        <span class="stat-value">8</span>
+        <span class="stat-label">Scooters</span>
+      </div>
+    </div>
+    <div class="stat-card" routerLink="/vehicle/cars">
+      <div class="stat-icon">🚗</div>
+      <div class="stat-info">
+        <span class="stat-value">15</span>
+        <span class="stat-label">Cars</span>
+      </div>
+    </div>
+    <div class="stat-card" (click)="navigateToMaintenance()">
+      <div class="stat-icon">🔧</div>
+      <div class="stat-info">
+        <span class="stat-value">3</span>
+        <span class="stat-label">In Maintenance</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="overview-chart">
+    <h3>Fleet Utilization</h3>
+    <div class="chart-bars">
+      <div class="chart-bar">
+        <div class="bar-fill" style="height: 75%"></div>
+        <div class="bar-label">Mon</div>
+      </div>
+      <div class="chart-bar">
+        <div class="bar-fill" style="height: 60%"></div>
+        <div class="bar-label">Tue</div>
+      </div>
+      <div class="chart-bar">
+        <div class="bar-fill" style="height: 85%"></div>
+        <div class="bar-label">Wed</div>
+      </div>
+      <div class="chart-bar">
+        <div class="bar-fill" style="height: 50%"></div>
+        <div class="bar-label">Thu</div>
+      </div>
+      <div class="chart-bar">
+        <div class="bar-fill" style="height: 90%"></div>
+        <div class="bar-label">Fri</div>
+      </div>
+      <div class="chart-bar">
+        <div class="bar-fill" style="height: 40%"></div>
+        <div class="bar-label">Sat</div>
+      </div>
+      <div class="chart-bar">
+        <div class="bar-fill" style="height: 30%"></div>
+        <div class="bar-label">Sun</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="tab-description">
+    This tab demonstrates routing to a component within the parent vehicle
+    container. Click on different tabs to see how the router loads different
+    components in the same outlet while maintaining the parent component state.
+  </p>
+</div>

@@ -1,0 +1,218 @@
+// Common styling - shared with other tabs
+.tab-component-container {
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+.tab-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e1e4e8;
+
+  .tab-icon {
+    font-size: 2rem;
+    margin-right: 15px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin: 0;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+}
+
+.tab-description {
+  margin-top: 30px;
+  color: #6c757d;
+  font-size: 0.95rem;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+
+  code {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #e74c3c;
+  }
+}
+
+// Maintenance-specific styling
+.maintenance-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.status-panel,
+.maintenance-schedule {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  padding: 20px;
+
+  h3 {
+    font-size: 1.2rem;
+    margin: 0 0 20px;
+    color: #2c3e50;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e1e4e8;
+  }
+}
+
+.status-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.status-card {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  }
+
+  .status-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 1.3rem;
+
+    &.pending {
+      background-color: #fff3e0;
+      color: #ff9800;
+    }
+
+    &.in-progress {
+      background-color: #e3f2fd;
+      color: #2196f3;
+    }
+
+    &.completed {
+      background-color: #e8f5e9;
+      color: #4caf50;
+    }
+  }
+
+  .status-details {
+    h4 {
+      margin: 0 0 5px;
+      font-size: 1rem;
+      color: #2c3e50;
+    }
+
+    .status-count {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #3498db;
+    }
+  }
+}
+
+.schedule-table {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+
+  .table-header {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr 1.2fr;
+    background-color: #f5f7fa;
+    border-bottom: 2px solid #e1e4e8;
+
+    .header-cell {
+      padding: 12px 15px;
+      font-weight: 600;
+      color: #2c3e50;
+      font-size: 0.95rem;
+    }
+  }
+
+  .table-row {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr 1.2fr;
+    border-bottom: 1px solid #e1e4e8;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #f8f9fa;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .cell {
+      padding: 12px 15px;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+
+      &.vehicle {
+        .vehicle-icon {
+          margin-right: 10px;
+          font-size: 1.2rem;
+        }
+      }
+
+      .status-indicator {
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+
+        &.pending {
+          background-color: #fff3e0;
+          color: #e65100;
+        }
+
+        &.in-progress {
+          background-color: #e3f2fd;
+          color: #0d47a1;
+        }
+
+        &.completed {
+          background-color: #e8f5e9;
+          color: #1b5e20;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .schedule-table {
+    .table-header,
+    .table-row {
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .schedule-table {
+    display: block;
+    overflow-x: auto;
+
+    .table-header,
+    .table-row {
+      min-width: 600px;
+    }
+  }
+}
