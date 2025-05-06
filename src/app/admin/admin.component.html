@@ -19,7 +19,12 @@
         <span class="option-icon">🏠</span>
         <span class="option-label">Dashboard</span>
       </a>
-      <a routerLink="/admin/user" routerLinkActive="active" class="nav-option">
+      <a
+        routerLink="/admin/user"
+        routerLinkActive="active"
+        [state]="{ user: 'Raj' }"
+        class="nav-option"
+      >
         <span class="option-icon">👥</span>
         <span class="option-label">User Management</span>
       </a>

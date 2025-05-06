@@ -33,5 +33,25 @@
   <div class="module-info">
     <span class="module-badge">Lazy Loaded</span>
     <p>This is a child component of the Admin module</p>
+
+    <!-- Router State Information Section -->
+    <div class="router-state-demo" *ngIf="routerState">
+      <h3>Router State Data:</h3>
+      <div class="state-explanation">
+        <p>
+          This shows data passed between routes using Angular Router's state
+          property:
+        </p>
+        <pre>{{ routerState | json }}</pre>
+      </div>
+    </div>
+
+    <!-- When no router state is available -->
+    <div class="router-state-demo" *ngIf="!routerState">
+      <h3>Router State Data:</h3>
+      <div class="state-explanation">
+        <p>No router state was passed to this component.</p>
+      </div>
+    </div>
   </div>
 </div>

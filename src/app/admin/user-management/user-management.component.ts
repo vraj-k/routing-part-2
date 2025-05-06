@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-management',
@@ -6,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-management.component.scss'],
 })
 export class UserManagementComponent implements OnInit {
-  constructor() {}
+  routerState: any = null;
 
-  ngOnInit() {}
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    // not guaranteed as Angular caches the last successful navigation router state
+    this.routerState = this.router.lastSuccessfulNavigation?.extras.state;
+    console.log(this.routerState);
+  }
 }
